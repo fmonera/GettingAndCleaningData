@@ -1,4 +1,26 @@
-# Description of variables in the Tidy Data
+# Initial data for analysis
+
+The data was obtained from UCI Machine Learning repository. It represents the data collected from Smartphone sensors (gyroscope, accelerometer, etc.) during different activities performed by a group of subjects between 19 and 48 years old.
+
+# Data transformation
+
+The raw data has been transformed through different steps until we got a tidy dataset. The steps performed are the following:
+
+1. Merge training and test sets into one, named **alldata**.
+2. Generate another data set with just the mean and the standard deviation, named **meanstddata**.
+3. Assign descriptive activity names to meanstddata by reading the activity names from the **activity_labels.txt** file. We had already loaded this file into **activitiesMeta**.
+4. Assign descriptive activity names. What we do here is just a simple substitution of the column names to give more meaningfull names.
+5. Create a new tidy set with the average of each variable for each activity and subject. To do this we use the aggregate function to group by activity and subject, agregating by the mean function.
+The resulting data set is written to a new file at the end of the script. The file is named **avgdata.txt**.
+
+# Description of variables in the Tidy Data set: avgdata.txt
+
+The tidy data set has 81 variables:
+* A ** subject** variable that identifies the person who carried out the experiment
+* An **activity** variable: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING and LAYING
+* 79 signal variables with average data on it
+
+Following is the description of each of the signal variables:
 
 * **subject**: Identifies the sobject who performed the activity                                           
 * **activity**: The actual activity performed by the subject. WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING and LAYING                                          
