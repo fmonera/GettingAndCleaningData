@@ -16,7 +16,7 @@ The resulting data set is written to a new file at the end of the script. The fi
 # Description of variables in the Tidy Data set: avgdata.txt
 
 The tidy data set has 81 variables:
-* A ** subject** variable that identifies the person who carried out the experiment
+* A **subject** variable that identifies the person who carried out the experiment
 * An **activity** variable: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING and LAYING
 * 79 signal variables with average data on it
 
